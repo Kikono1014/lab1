@@ -18,3 +18,48 @@ aside {
 aside a {
   text-decoration: none;
 }
+
+
+
+
+#reviews {
+  margin-top: 40px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.review {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.review h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.review p {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.review .meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
