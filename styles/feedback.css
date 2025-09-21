@@ -36,19 +36,34 @@ textarea {
   max-height: 200px;
 }
 
-.row {
-  display: flex;
-  gap: 22px;
-}
-
-.row>* {
-  flex: 1;
-}
-
 .action {
   margin-top: 12px;
 }
 
+
+
+
+
+.row {
+  display: flex;
+  gap: 22px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+  order: 0;
+  align-self: stretch;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
 .consent {
-  margin-top:10px;
+  align-self: flex-start;
 }

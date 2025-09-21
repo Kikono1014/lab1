@@ -40,7 +40,7 @@ header a:has(> img.logo) {
 }
 
 nav {
-  background: #1d6fa5;
+  background: rgb(28, 111, 164);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -56,6 +56,20 @@ nav {
   border: 0;
   border-radius: 6px;
   background: #0b486e;
+}
+
+.btn:visited {
+  color: #fff;
+}
+
+.btn:hover {
+  color: #0b486e;
+  background: #fff;
+}
+
+.btn:active {
+  color: #0b486e;
+  background: #bcbcbc;
 }
 
 .btn.left {
@@ -96,7 +110,7 @@ footer .contacts {
 }
 
 main {
-padding: 10px 5% 10px 5%;
+  padding: 10px 5% 10px 5%;
 }
 
 article {
@@ -105,3 +119,11 @@ article {
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
 }
+
+
+body {
+  background: #f6f7fb 
+    url('https://clipground.com/images/pattern-png-transparent-4.png')
+    no-repeat center center fixed;
+}
+
