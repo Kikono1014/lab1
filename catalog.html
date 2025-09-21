@@ -7,6 +7,57 @@
   <link rel="icon" type="image/png" href="imgs/logo.png">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/catalog.css">
+  <style>
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 20;
+    }
+
+    nav {
+      margin-top: 115px;
+    }
+
+    .products .card {
+      border: 1px solid darkgreen;
+      border-top: 2px dotted darkgreen;
+      border-bottom: 1px solid darkgreen;
+      border-left: 1px solid darkgreen;
+      border-right: 1px solid darkgreen;
+      box-shadow: inset 0 0 10px rgba(0, 100, 0, 0.2);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-weight: 700;
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    .card ul {
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    .card img:hover {
+      animation: vintage 1s forwards;
+    }
+
+    @keyframes vintage {
+      from {
+        filter: none;
+      }
+      to {
+        filter: sepia(100%) grayscale(20%) brightness(90%);
+      }
+    }
+
+    a:visited {
+      color: darkgreen;
+    }
+  </style>
 </head>
 <body>
   <header>
