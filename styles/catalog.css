@@ -24,3 +24,28 @@
 
 
 
+
+.new-label {
+  color: red;
+  font-size: 1.2em;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(8) infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12ch; }
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  border: 1px solid #cbd6e6;
+  border-radius: 4px;
+  max-width: 99%;
+}
+

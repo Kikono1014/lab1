@@ -67,3 +67,17 @@ fieldset {
 .consent {
   align-self: flex-start;
 }
+
+
+
+.tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 10;
+  right: 0;
+  width: 20%;
+}

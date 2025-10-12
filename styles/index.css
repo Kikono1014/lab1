@@ -97,14 +97,6 @@ section:has(table) {
 section:has(table):hover {
   transform: translateY(-2%);
 }
-/* 
-aside {
-  transition: transform 0.3s ease;
-}
-
-aside::selection {
-  transform: colo;
-} */
 
 section:has(ol) p{
   max-height: 45px;
@@ -126,11 +118,9 @@ article {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   position: static;
-}
-
-footer {
-  margin-top: 1200px;
 }
 
 
@@ -141,10 +131,44 @@ aside p::selection {
 
 @keyframes enhance {
   from {
-    background-color: rgb(0, 102, 204);
+    color: rgb(0, 102, 204);
   }
   to {
-    /* background-color: red; */
-    background-color: rgb(0, 92, 184);
+    color: red;
+    /* background-color: rgb(0, 92, 184); */
+  }
+}
+
+
+
+
+
+/* Додаткові стилі для анімації падаючих зображень */
+.falling-image {
+  position: absolute;
+  top: 20px;
+  width: auto;
+  height: 2em;
+  pointer-events: none;
+  animation: fall 5s linear infinite;
+  z-index: 10;
+}
+
+header .top .text {
+  z-index: 11;
+}
+
+header .top a {
+  z-index: 11;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10vh);
+    opacity: 0;
   }
 }
