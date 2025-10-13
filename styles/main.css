@@ -127,3 +127,70 @@ body {
     no-repeat center center fixed;
 }
 
+
+
+
+
+
+.mobile nav {
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    width: 19%;
+    height: 2380px;
+    z-index: 10;
+}
+
+.mobile aside {
+    float: none;
+    width: 72%;
+}
+
+.mobile article {
+    float: none;
+    margin-top: 175px;
+    width: 72%;
+}
+
+.mobile main {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mobile .top {
+    margin-left: 5px;
+}
+
+.mobile .btn {
+    margin-bottom: 5px;
+}
+
+.desktop nav {
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.desktop aside {
+    float: right;
+    width: 19%;
+}
+
+.desktop article {
+    float: left;
+    margin-top: 0px;
+    width: 70%;
+}
+
+.desktop main {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.desktop .top {
+    margin-left: 5%;
+}
