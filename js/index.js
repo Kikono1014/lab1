@@ -51,6 +51,10 @@ $(function () {
         } else {
           $('html, body').animate({ scrollTop: 0 }, 10);
         }
+
+        if (activeId === 'catalog') $(document).trigger('catalog:ready');
+        if (activeId === 'feedback') $(document).trigger('feedback:ready');
+        if (activeId === 'home' || id === 'reviews') $(document).trigger('home:ready');
       })
       .fail(function () {
         $content.html('<p style="color:red;text-align:center;">Помилка завантаження сторінки.</p>');
@@ -61,7 +65,7 @@ $(function () {
   }
 
   // При натисканні кнопки змінюється лише хеш
-  $(document).on('click', 'nav a[href^="#"], .back[href^="#"]', function (e) {
+  $(document).on('click', 'a[href^="#"], .back[href^="#"]', function (e) {
     e.preventDefault();
     const hash = this.href.split('#')[1];
     if (window.location.hash === '#' + hash) return;
