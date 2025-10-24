@@ -1,0 +1,73 @@
+<section id="feedback" class="page">
+  <article>
+    <p>Якщо у вас є питання або пропозиції - залиште повідомлення.</p>
+
+    <form action="#" method="post" onsubmit="alert('Дані відправлено (демо)');return false;">
+
+      <fieldset>
+        <legend>Персональна інформація</legend>
+        <div class="row">
+          <div class="fio">
+            <label for="fio">Прізвище та ім'я</label>
+            <input id="fio" name="fio" type="text" required placeholder="Іваненко Іван">
+          </div>
+          <div class="email">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required placeholder="name@example.com">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="age">
+            <label for="age">Вік</label>
+            <input id="age" name="age" type="number" min="14" max="120" required>
+          </div>
+          <div class="edu">
+            <label for="edu">Освіта</label>
+            <select id="edu" name="education" required>
+              <option value="povna">повна</option>
+              <option value="ne_povna">неповна</option>
+              <option value="vysha">вища</option>
+              <option value="prof">професійна</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      
+      <div class="purpose">
+        <label for="purpose">Мета зворотнього зв'язку</label>
+        <select id="purpose" name="purpose">
+          <option value="spivpr">співпраця</option>
+          <option value="skarga">скарга на порушення права власності</option>
+          <option value="propoz">пропозиція</option>
+          <option value="pomylka">наявність помилки</option>
+        </select>
+      </div>
+      
+      <div class="details">
+        <label for="details">Детально</label>
+        <textarea id="details"
+                  name="details"
+                  maxlength="2000"
+                  rows="6" 
+                  cols="40"
+                  placeholder="Опишіть детально..."
+                  style="width:100%"></textarea>
+        <div id="tooltip" class="tooltip">Ваша думка для нас важлива! Конкретизуйте мету звернення, будь ласка</div>
+      </div>
+
+      <div class="consent">
+        <label><input type="checkbox" name="consent" required> Я погоджуюсь на обробку персональних даних</label>
+      </div>
+
+      <div class="action">
+        <button type="submit" class="btn">Надіслати</button>
+      </div>
+
+    </form>
+
+  </article>
+</section>
+
+<script src="js/feedback.js"></script>
+

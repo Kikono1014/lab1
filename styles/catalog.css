@@ -1,10 +1,10 @@
-.products {
+#catalog .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 12px;
 }
 
-.card img {
+#catalog .card img {
   max-width: 280px;
   max-height: 240px;
   object-fit: cover;
@@ -14,7 +14,7 @@
   margin-right: auto;
 }
 
-.back {
+#catalog .back {
   margin-top: 12px;
   display: inline-block;
   text-decoration: none;
@@ -25,7 +25,7 @@
 
 
 
-.new-label {
+#catalog .new-label {
   color: red;
   font-size: 1.2em;
   display: inline-block;
@@ -39,7 +39,7 @@
   to { width: 12ch; }
 }
 
-#search-input {
+#catalog #search-input {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;

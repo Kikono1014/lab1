@@ -1,0 +1,132 @@
+#home aside {
+  width: 18%;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+#home aside a {
+  text-decoration: none;
+}
+
+
+
+#home #reviews {
+  margin-top: 40px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+#home .review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+#home .review {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+#home .review h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+#home .review p {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+#home .review .meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+
+
+
+#home header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#home nav {
+  margin-top: 115px;
+}
+
+
+#home #meta {
+  margin: 10px;
+  padding: 5px;
+}
+
+#home #meta::before {
+  content: "😊";
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#home #table {
+  transition: transform 0.3s ease;
+}
+
+#home #table:hover {
+  transform: translateY(-2%);
+}
+
+#home #meta p{
+  max-height: 45px;
+  overflow: scroll;
+}
+
+#home article {
+  width: 70%;
+  float: left;
+}
+
+#home aside {
+  width: 18%;
+  float: right;
+}
+
+#home article {
+  position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: static;
+}
+
+
+#home aside p::selection {
+  background-color: rgb(0, 102, 204);
+  animation: enhance 0.5s ease-in 2s forwards;
+}
+
+@keyframes enhance {
+  from {
+    color: rgb(0, 102, 204);
+  }
+  to {
+    color: red;
+    /* background-color: rgb(0, 92, 184); */
+  }
+}
+

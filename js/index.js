@@ -1,27 +1,77 @@
-const header = document.getElementsByTagName('header')[0];
-const products = [
-    'imgs/products/1.jpg',
-    'imgs/products/2.jpg',
-    'imgs/products/3.jpg',
-    'imgs/products/4.jpg',
-    'imgs/products/5.jpg',
-    'imgs/products/6.jpg',
-    'imgs/products/7.jpg',
-    'imgs/products/8.jpg',
-    'imgs/products/9.jpg',
-    'imgs/products/10.jpg'
-];
+$(function () {
+  const $content = $('#content');
+  let currentAjax = null;
 
-function createFallingImage() {
-    const img = document.createElement('img');
-    img.src = products[Math.floor(Math.random() * products.length)];
-    img.classList.add('falling-image');
-    img.style.left = `${Math.random() * 100}%`;
-    header.appendChild(img);
+  const pages = {
+    home: 'pages/home.html',
+    catalog: 'pages/catalog.html',
+    feedback: 'pages/feedback.html',
+    reviews: 'pages/home.html'
+  };
 
-    setTimeout(() => {
-        header.removeChild(img);
-    }, 5000);
-}
+  function showPage(id) {
+    $content.empty();
 
-setInterval(createFallingImage, 1000);
+    let activeId = id;
+    let scrollTo = null;
+
+    if (id === 'reviews') {
+      activeId = 'home';
+      scrollTo = '#reviews';
+    }
+
+    const url = pages[activeId];
+    if (!url) {
+      $content.html('<p style="color:red;text-align:center;">Невідома сторінка.</p>');
+      return;
+    }
+
+    if (currentAjax) {
+      currentAjax.abort();
+    }
+
+    currentAjax = $.get(url)
+      .done(function (html) {
+        let $html = $(html);
+        
+        $content.html("");
+
+        $content.append($html);
+
+        // Скрол
+        if (scrollTo) {
+          const $el = $(scrollTo);
+          if ($el.length) {
+            const headerHeight = $('header').outerHeight() || 0;
+            const offset = $el.offset().top - headerHeight;
+            $('html, body').animate({ scrollTop: offset }, 10);
+          } else {
+            $('html, body').animate({ scrollTop: 0 }, 10);
+          }
+        } else {
+          $('html, body').animate({ scrollTop: 0 }, 10);
+        }
+      })
+      .fail(function () {
+        $content.html('<p style="color:red;text-align:center;">Помилка завантаження сторінки.</p>');
+      })
+      .always(function () {
+        currentAjax = null;
+      });
+  }
+
+  // При натисканні кнопки змінюється лише хеш
+  $(document).on('click', 'nav a[href^="#"], .back[href^="#"]', function (e) {
+    e.preventDefault();
+    const hash = this.href.split('#')[1];
+    if (window.location.hash === '#' + hash) return;
+    window.location.hash = hash;
+  });
+
+  // При зміні хешу завантажується сторінка
+  $(window).on('hashchange', function () {
+    let hash = window.location.hash.substring(1);
+    if (!hash || !pages[hash] && hash !== 'reviews') hash = 'home';
+    showPage(hash);
+  }).trigger('hashchange');
+});

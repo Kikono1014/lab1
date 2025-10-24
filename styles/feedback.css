@@ -1,17 +1,17 @@
-article {
+#feedback article {
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
 
-fieldset {
+#feedback fieldset {
   border: 1px solid #cbd6e6;
   padding: 12px;
   border-radius: 6px;
   margin-bottom: 12px;
 }
 
-label {
+#feedback label {
   display: block;
   margin-top: 8px;
 }
@@ -30,21 +30,21 @@ textarea {
 
 }
 
-textarea {
+#feedback textarea {
   resize: vertical;
   min-height: 120px;
   max-height: 200px;
 }
 
-.action {
+#feedback #feedback .action {
   margin-top: 12px;
 }
 
+#feedback 
 
 
 
-
-.row {
+#feedback .row {
   display: flex;
   gap: 22px;
   flex-flow: row nowrap;
@@ -52,25 +52,23 @@ textarea {
   align-items: center;
 }
 
-.row > * {
+#feedback #feedback .row > * {
   flex-grow: 1;
   flex-shrink: 1;
   order: 0;
   align-self: stretch;
 }
 
-fieldset {
+#feedback fieldset {
   display: flex;
   flex-direction: column;
 }
 
-.consent {
+#feedback #feedback .consent {
   align-self: flex-start;
 }
 
-
-
-.tooltip {
+#feedback .tooltip {
   position: absolute;
   background: #fff;
   border: 1px solid #ccc;

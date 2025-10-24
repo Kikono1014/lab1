@@ -1,143 +1,132 @@
-/* main {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  background: #f6f7fb;
+  zoom: 150%;
+}
+
+header,
+footer {
+  background: #0f4c81;
+  color: #fff;
+  padding: 18px;
+}
+
+header .top {
   display: flex;
-  gap: 20px;
-} */
+  align-items: center;
+  gap: 16px;
+  margin-left: 8%;
+}
 
-/* article {
-  flex: 1;
-} */
+header .top h1, p {
+  margin: 0;
+}
 
-aside {
-  /* width: 18%; */
+header .logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #fff;
+  display: inline-block;
+}
+
+header a:has(> img.logo) {
+  width: 80px;
+  height: 80px;
+}
+
+nav {
+  background: rgb(28, 111, 164);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  font-size: 16px;
+  display: inline-block;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  border-radius: 6px;
+  background: #0b486e;
+}
+
+.btn:visited {
+  color: #fff;
+}
+
+.btn:hover {
+  color: #0b486e;
+  background: #fff;
+}
+
+.btn:active {
+  color: #0b486e;
+  background: #bcbcbc;
+}
+
+.btn.left {
+  margin-right: 8px;
+}
+
+.btn.right {
+  margin-left: 8px;
+}
+
+nav .right img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+footer .contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.styled-sentence {
+  margin-top: 12px;
+}
+
+main {
+  padding: 10px 5% 10px 5%;
+}
+
+article {
   padding: 12px;
-  background: white;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
 }
 
-aside a {
-  text-decoration: none;
-}
-
-
-
-#reviews {
-  margin-top: 40px;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-
-.review-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.review {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  padding: 16px;
-  border-radius: 8px;
-}
-
-.review h3 {
-  margin: 0 0 8px;
-  font-size: 16px;
-  color: #1f2937;
-}
-
-.review p {
-  margin: 0;
-  font-size: 14px;
-  color: #374151;
-  line-height: 1.5;
-}
-
-.review .meta {
-  font-size: 12px;
-  color: #6b7280;
-  margin-bottom: 6px;
-}
-
-
-
-
-header{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-nav {
-  margin-top: 115px;
-}
-
-
-section:has(ol) {
-  margin: 10px;
-  padding: 5px;
-}
-
-section:has(ol)::before {
-  content: "😊";
-  display: block;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-section:has(table) {
-  transition: transform 0.3s ease;
-}
-
-section:has(table):hover {
-  transform: translateY(-2%);
-}
-
-section:has(ol) p{
-  max-height: 45px;
-  overflow: scroll;
-}
-
-article {
-  width: 70%;
-  float: left;
-}
-
-aside {
-  width: 18%;
-  float: right;
-}
-
-article {
-  position: relative;
-}
 
 body {
-  display: flex;
-  flex-direction: column;
-  position: static;
+  background: #f6f7fb 
+    url('https://clipground.com/images/pattern-png-transparent-4.png')
+    no-repeat center center fixed;
 }
 
-
-aside p::selection {
-  background-color: rgb(0, 102, 204);
-  animation: enhance 0.5s ease-in 2s forwards;
-}
-
-@keyframes enhance {
-  from {
-    color: rgb(0, 102, 204);
-  }
-  to {
-    color: red;
-    /* background-color: rgb(0, 92, 184); */
-  }
-}
 
 
 
