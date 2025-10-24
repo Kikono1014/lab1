@@ -1,6 +1,6 @@
 $(document).on('feedback:ready', function () {
   const $details = $('#details');
-  const $tooltip = $('.tooltip');
+  const $tooltip = $('#tooltip');
 
   if ($details.data('feedback-bound')) return;
   $details.data('feedback-bound', true);
